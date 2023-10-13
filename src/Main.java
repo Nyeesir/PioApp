@@ -4,10 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Random rand = new Random();     //obiekt losujący
+        Random rand = new Random();
         Player player = new Player("Janek");
-        int number;                     //wylosowana liczba
-        int guess;                      //propozycja (strzał) gracza
+        int number;
+        int guess;
 
         do {
             System.out.println("---------------------");
