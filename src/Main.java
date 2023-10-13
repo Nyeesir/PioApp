@@ -6,8 +6,6 @@ public class Main {
 
         Random rand = new Random();     //obiekt losujący
         Player player = new Player("Janek");
-//        Player player = new Player();
-//        player.setFirstName("Janek");
         int number;                     //wylosowana liczba
         int guess;                      //propozycja (strzał) gracza
 
