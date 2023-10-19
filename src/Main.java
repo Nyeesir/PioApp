@@ -19,7 +19,7 @@ public class Main {
             System.out.println("Gracz " + player.getFirstName()+ ": " + guess);
 
             if (number != guess) {
-                System.out.println("PUD≈ÅO!");
+                System.out.println("PUD£O!");
             }
             else {
                 System.out.println("BRAWO!");

@@ -2,10 +2,11 @@ import java.util.Random;
 
 public class Player {
     private Random random = new Random();
-    private String firstName;
+    private String firstName = "domyœlny";
 
+    public Player() {}
     public Player(String firstName) {
-        this.firstName = firstName;
+        setFirstName(firstName);
     }
 
     public int guess() {
@@ -13,7 +14,12 @@ public class Player {
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        if (firstName != null && !firstName.isEmpty()) {
+        	this.firstName = firstName;
+        }
+        else {
+        	System.err.println("Nieprawid³owe dane");
+        }
     }
 
     public String getFirstName() {
