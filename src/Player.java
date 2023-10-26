@@ -2,7 +2,7 @@ import java.util.Random;
 
 public class Player {
     private Random random = new Random();
-    private String firstName = "domyúlny";
+    private String firstName = "Anonim";
 
     public Player() {}
     public Player(String firstName) {
@@ -15,10 +15,10 @@ public class Player {
 
     public void setFirstName(String firstName) {
         if (firstName != null && !firstName.isEmpty()) {
-        	this.firstName = firstName;
+            this.firstName = firstName;
         }
         else {
-        	System.err.println("Nieprawid≥owe dane");
+            System.err.println("Nieprawid≈Çowe dane");
         }
     }
 

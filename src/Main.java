@@ -5,7 +5,15 @@ public class Main {
     public static void main(String[] args) {
 
         Random rand = new Random();
-        Player player = new Player("Janek");
+
+        int mode = 1;
+        Player player;
+        if (mode == 1) 
+            player = new Player();
+        else
+            player = new PlayerHuman();
+//        Player player = new Player("Janek");
+//        PlayerHuman player = new PlayerHuman("Janek");
         int number;
         int guess;
 
@@ -19,7 +27,7 @@ public class Main {
             System.out.println("Gracz " + player.getFirstName()+ ": " + guess);
 
             if (number != guess) {
-                System.out.println("PUD£O!");
+                System.out.println("PUD≈ÅO!");
             }
             else {
                 System.out.println("BRAWO!");
