@@ -8,12 +8,18 @@ public class Main {
 
         int mode = 1;
         Player player;
-        if (mode == 1) 
-            player = new Player();
+        if (mode == 1)
+            player = new PlayerComp();
         else
             player = new PlayerHuman();
-//        Player player = new Player("Janek");
-//        PlayerHuman player = new PlayerHuman("Janek");
+
+        try{
+            player.setFirstName("");
+        }
+        catch (IllegalArgumentException ex){
+            System.err.println("błąd");
+        }
+
         int number;
         int guess;
 

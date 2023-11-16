@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Player {
+abstract public class Player {
     private Random random = new Random();
     private String firstName = "Anonim";
 
@@ -9,16 +9,14 @@ public class Player {
         setFirstName(firstName);
     }
 
-    public int guess() {
-        return random.nextInt(6)+1;
-    }
+    abstract public int guess();
 
     public void setFirstName(String firstName) {
         if (firstName != null && !firstName.isEmpty()) {
             this.firstName = firstName;
         }
         else {
-            System.err.println("Nieprawidłowe dane");
+            throw new IllegalArgumentException();
         }
     }
 
