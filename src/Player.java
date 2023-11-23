@@ -12,7 +12,7 @@ abstract public class Player {
     abstract public int guess();
 
     public void setFirstName(String firstName) {
-        if (firstName != null && !firstName.isEmpty()) {
+        if (firstName != null && firstName.matches("^[\\p{Lu}\\p{Ll}\\p{Nd}.\\-_]{3,}$")) { //^[A-Za-z0-9.\-_]{3,}$
             this.firstName = firstName;
         }
         else {
