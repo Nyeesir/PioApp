@@ -11,6 +11,7 @@ public class Main {
         }
         Game game = new Game();
         game.addPlayer(player);
+        game.addPlayer(new PlayerHuman("Michał"));
         game.play();
     }
 }

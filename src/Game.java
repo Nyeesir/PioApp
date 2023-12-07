@@ -15,28 +15,31 @@ public class Game {
         playerList.add(player);
     }
 
-    public void play(){
+    public void play() {
         checkIfEmpty();
 
         int number;
         int guess;
 
+        boolean guessed;
         do {
+            guessed = false;
             System.out.println("---------------------");
 
             number = rand.nextInt(6) + 1;
             System.out.println("Kostka: " + number);
 
-            guess = playerList.get(0).guess();
-            System.out.println("Gracz " + playerList.get(0).getFirstName()+ ": " + guess);
-
-            if (number != guess) {
-                System.out.println("PUDŁO!");
+            for (Player player : playerList) {
+                System.out.println("Gracz "+player.getFirstName());
+                guess = player.guess();
+                if (number != guess) {
+                    System.out.println("PUDŁO!");
+                } else {
+                    System.out.println("BRAWO!");
+                    guessed = true;
+                }
             }
-            else {
-                System.out.println("BRAWO!");
-            }
 
-        } while (number != guess);
+        } while (!guessed);
     }
 }
